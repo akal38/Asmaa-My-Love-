@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <title>عيد ميلاد سعيد 💖</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Cairo', sans-serif;
+      background-image: url('téléchargement (6).jpg');
+      background-size: cover;
+      background-position: center;
+      color: #fff;
+      text-align: center;
+    }
+
+    .frame {
+      background-color: rgba(255, 182, 193, 0.85);
+      margin: 100px auto;
+      padding: 30px;
+      border-radius: 25px;
+      width: 80%;
+      max-width: 600px;
+      box-shadow: 0 0 15px #ff69b4;
+      border: 4px dashed #fff;
+    }
+
+    h1 {
+      font-size: 2.8em;
+      margin-bottom: 10px;
+    }
+
+    p {
+      font-size: 1.3em;
+    }
+
+    .countdown {
+      margin: 25px 0;
+      font-size: 1.5em;
+      color: #880e4f;
+    }
+
+    .button {
+      display: inline-block;
+      padding: 10px 20px;
+      margin: 10px;
+      background-color: #ff69b4;
+      color: white;
+      text-decoration: none;
+      border-radius: 20px;
+      font-size: 1em;
+    }
+
+    footer {
+      margin-top: 30px;
+      font-size: 0.9em;
+      color: #fff;
+    }
+
+    .floating-gifts {
+      position: absolute;
+      top: 30px;
+      left: 10%;
+      font-size: 2em;
+      animation: float 5s infinite ease-in-out;
+      opacity: 0.8;
+    }
+
+    @keyframes float {
+      0% { transform: translateY(0px); }
+      50% { transform: translateY(-30px); }
+      100% { transform: translateY(0px); }
+    }
+  </style>
+</head>
+<body>
+  <div class="frame">
+    <h1>🎉 عيد ميلاد سعيد يا حبيبتي 💖</h1>
+    <p>نحتفل معًا بـ 5 أوت 🎂🎈</p>
+
+    <div class="countdown">
+      ⏳ العد التنازلي: <span id="timer">00d 00h 00m 00s</span>
+    </div>
+
+    <a href="message.html" class="button">📩 رسالتي لك</a>
+    <a href="audio.html" class="button">🎧 استمعي لمفاجأتي</a>
+
+    <footer>Created by akalabdelhakamine38@gmail.com</footer>
+  </div>
+
+  <div class="floating-gifts">🎁 💖 🎈 🎂 🎉</div>
+
+  <script>
+    const timer = document.getElementById("timer");
+    const countDate = new Date("Aug 5, 2025 00:00:00").getTime();
+
+    setInterval(() => {
+      const now = new Date().getTime();
+      const gap = countDate - now;
+
+      if (gap <= 0) {
+        timer.innerHTML = "🎉 حان الوقت للاحتفال! 🎂";
+        return;
+      }
+
+      const d = Math.floor(gap / (1000 * 60 * 60 * 24));
+      const h = Math.floor((gap % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const m = Math.floor((gap % (1000 * 60 * 60)) / (1000 * 60));
+      const s = Math.floor((gap % (1000 * 60)) / 1000);
+
+      timer.innerHTML = `${d}d ${h}h ${m}m ${s}s`;
+    }, 1000);
+  </script>
+</body>
+</html>
