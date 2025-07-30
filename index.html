@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <title>عيد ميلاد سعيد 💖</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
     body {
       margin: 0;
@@ -72,6 +73,19 @@
       50% { transform: translateY(-30px); }
       100% { transform: translateY(0px); }
     }
+
+    @media (max-width: 600px) {
+      .frame {
+        width: 90%;
+        padding: 20px;
+      }
+      h1 {
+        font-size: 2em;
+      }
+      p, .countdown {
+        font-size: 1.1em;
+      }
+    }
   </style>
 </head>
 <body>
@@ -86,7 +100,7 @@
     <a href="message.html" class="button">📩 رسالتي لك</a>
     <a href="audio.html" class="button">🎧 استمعي لمفاجأتي</a>
 
-    <footer>Created by akalabdelhakamine38@gmail.com</footer>
+    <footer><a href="mailto:akalabdelhakamine38@gmail.com">Created by akalabdelhakamine38@gmail.com</a></footer>
   </div>
 
   <div class="floating-gifts">🎁 💖 🎈 🎂 🎉</div>
