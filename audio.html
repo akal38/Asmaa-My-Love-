@@ -33,19 +33,30 @@
       margin: 20px 0;
     }
 
-    a {
+    .button {
       display: inline-block;
       padding: 10px 20px;
       background-color: #e91e63;
       color: #fff;
       text-decoration: none;
       border-radius: 20px;
+      font-size: 1em;
+      margin-top: 10px;
     }
 
     footer {
-      margin-top: 30px;
+      margin-top: 25px;
       font-size: 0.9em;
-      color: #999;
+      color: #6a1b4d;
+    }
+
+    footer a {
+      color: #6a1b4d;
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
     }
 
     @media (max-width: 600px) {
@@ -69,12 +80,14 @@
   <div class="frame">
     <h2>🎧 استمعي إلى رسالتي ❤️</h2>
     <audio controls>
-      <source src="voice.mp3" type="audio/mpeg" />
+      <source src="Recording_12.m4a" type="audio/mpeg" />
       متصفحك لا يدعم تشغيل الصوت.
     </audio>
     <br>
-    <a href="index.html">⬅️ العودة</a>
-    <footer><a href="mailto:akalabdelhakamine38@gmail.com">Created by akalabdelhakamine38@gmail.com</a></footer>
+    <a class="button" href="index.html">⬅️ العودة</a>
+    <footer>
+      Created by <a href="mailto:akalabdelhakamine38@gmail.com">akalabdelhakamine38@gmail.com</a>
+    </footer>
   </div>
 </body>
 </html>

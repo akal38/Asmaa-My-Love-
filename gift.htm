@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <title>🎁 هديتك</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(to right, #f8bbd0, #fce4ec);
+      font-family: 'Cairo', sans-serif;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      color: #880e4f;
+      position: relative;
+    }
+
+    .gift {
+      font-size: 100px;
+      cursor: pointer;
+      transition: transform 0.3s ease;
+      animation: bounce 2s infinite;
+    }
+
+    .gift:hover {
+      transform: scale(1.1);
+    }
+
+    @keyframes bounce {
+      0%, 100% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(-15px);
+      }
+    }
+
+    .label {
+      margin-top: 15px;
+      font-size: 1.4em;
+      font-weight: bold;
+      color: #ad1457;
+    }
+
+    .message-box {
+      margin-top: 30px;
+      background: #fff0f5;
+      border: 4px double #e91e63;
+      padding: 25px;
+      border-radius: 20px;
+      width: 80%;
+      max-width: 500px;
+      box-shadow: 0 0 20px rgba(255, 105, 180, 0.4);
+      font-size: 1.3em;
+      line-height: 1.6em;
+      display: none;
+    }
+
+    .back-button {
+      margin-top: 20px;
+      background-color: #e91e63;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 10px;
+      font-size: 1em;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    .back-button:hover {
+      background-color: #ad1457;
+    }
+
+    .footer {
+      position: absolute;
+      bottom: 10px;
+      font-size: 0.9em;
+      color: #6d214f;
+    }
+
+    .footer a {
+      color: #6d214f;
+      text-decoration: none;
+    }
+
+    .footer a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="gift" onclick="openGift()">🎁</div>
+  <div class="label">اضغطي لفتح الهدية</div>
+
+  <div class="message-box" id="messageBox">
+    هاكي بوسة 😘 <br>
+    هي الهدية شاحاسبتني نعطيلك زعما 🙂 <br><br>
+    <button class="back-button" onclick="goBack()">رجوع</button>
+  </div>
+
+  <div class="footer">
+    Created by <a href="mailto:akalabdelhakamine38@gmail.com">akalabdelhakamine38@gmail.com</a>
+  </div>
+
+  <script>
+    function openGift() {
+      document.getElementById("messageBox").style.display = "block";
+    }
+
+    function goBack() {
+      window.history.back();
+    }
+  </script>
+
+</body>
+</html>
